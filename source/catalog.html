@@ -15,30 +15,31 @@
 
 <body class="page__body">
   <header class="main-header header-container">
-    <div class="main-header__logo logo">
-      <a class="logo__link" href="#">
-        <img src="#" width="33" height="38" alt="Логотип">
-        <img src="#" width="101" height="18" alt="Cat Energy">
-      </a>
-    </div>
+
+    <a class="main-header__logo logo" href="#">
+      <img class="logo__img" src="#" width="33" height="38" alt="Логотип">
+      <img class="logo__img" src="#" width="101" height="18" alt="Cat Energy">
+    </a>
     <nav class="main-header__nav navigation">
       <ul class="navigation__list">
-        <li class="navigation__item navigation__item--active">
+        <li class="navigation__item">
           <a class="navigation__link" href="index.html">Главная</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Каталог продукции</a>
+          <a class="navigation__link navigation__link--active" href="#">Каталог продукции</a>
+    
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
-    <div class="main-header__menu-button">
+    <button class="main-header__menu-button" type="button">
+      <span class="visualy-hidden">Кнопка меню</span>
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   </header>
 
   <main class="main">
@@ -62,7 +63,7 @@
           <p class="catalog-card__description">Курица</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -81,7 +82,7 @@
           <p class="catalog-card__description">Курица</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -100,7 +101,7 @@
           <p class="catalog-card__description">Рыба</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>         
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -119,7 +120,7 @@
           <p class="catalog-card__description">Рыба</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>      
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -138,7 +139,7 @@
           <p class="catalog-card__description">Гречка</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>         
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -157,7 +158,7 @@
           <p class="catalog-card__description">Гречка</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
           <a class="catalog-card__link" href="#">
@@ -176,12 +177,12 @@
           <p class="catalog-card__description">Рис</p>
           <p class="catalog-card__description">Цена</p>
           <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link catalog-button" href="#">Заказать</a>
+          <a class="catalog-card__link button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card catalog-card--show-more">
           <h3 class="catalog-card__title">Показать еще 100500 товаров</h3>
           <p class="catalog-card__description">На самом деле вкусов гораздо больше!</p>
-          <a class="catalog-card__link catalog-button catalog-card__link--show-more" href="#">показать все</a>
+          <a class="catalog-card__link button button--show-all" href="#">показать все</a>
         </li>
       </ul>
     </section>
@@ -192,25 +193,25 @@
           <h3 class="additional-card__title">Сахарозаменитель</h3>
           <p class="additional-card__description">1 упаковка (100 г)</p>
           <p class="additional-card__description">200 &#8381;</p>
-          <a class="additional-card__link catalog-button" href="#">Заказать</a>
+          <a class="additional-card__link button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">питьевая вода</h3>
           <p class="additional-card__description">5 литров</p>
           <p class="additional-card__description">50 &#8381;</p>
-          <a class="additional-card__link catalog-button" href="#">Заказать</a>
+          <a class="additional-card__link button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">молоко</h3>
           <p class="additional-card__description">1 литр</p>
           <p class="additional-card__description">100 &#8381;</p>
-          <a class="additional-card__link catalog-button" href="#">Заказать</a>
+          <a class="additional-card__link button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">витамины</h3>
           <p class="additional-card__description">1 упаковка (30 г)</p>
           <p class="additional-card__description">300 &#8381;</p>
-          <a class="additional-card__link catalog-button" href="#">Заказать</a>
+          <a class="additional-card__link button" href="#">Заказать</a>
         </li>
       </ul>
     </section>
@@ -221,11 +222,12 @@
     <section class="subscribe">
       <h2 class="visualy-hidden">Оформите подписку</h2>
       <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <form class="subscribe__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="email">
-          <input class="subscribe-input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+          <input class="form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
         </label>
-        <button class="subscribe__button catalog-button" type="submit">Подписаться</button>
+        <button class="form__button button" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
@@ -237,8 +239,8 @@
     </div>
     <div class="footer__map map">
       <picture>
-        <source width="1440" height="400" type="image/jpg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
-        <source width="768" height="400" type="image/jpg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+        <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+        <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
         <img class="map__image" src="images/map-mobile@1x.jpg" srcset="images/map-tablet@2x.jpg" width="320" height="362" alt="карта как нас найти">
       </picture>
     </div>
@@ -246,17 +248,23 @@
       <div class="footer__logo">
         <img src="#" width="125" height="24" alt="Cat Energy">
       </div>
-      <div class="social">
-        <a class="social__link social__link--vk" href="#">
-          <span class="visualy-hidden">ВКонтакте</span>
-        </a>
-        <a class="social__link social__link--yt" href="#">
-          <span class="visualy-hidden">YouTube</span>
-        </a>
-        <a class="social__link social__link--tg" href="#">
-          <span class="visualy-hidden">Телеграм</span>
-        </a>
-      </div>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visualy-hidden">ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--yt" href="#">
+            <span class="visualy-hidden">YouTube</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--tg" href="#">
+            <span class="visualy-hidden">Телеграм</span>
+          </a>
+        </li>
+      </ul>
       <div class="copyright">
         <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
