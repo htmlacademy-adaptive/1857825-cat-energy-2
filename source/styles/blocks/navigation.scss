@@ -1,0 +1,18 @@
+/* .navigation {} */
+
+.navigation__list {
+  font-family: $title-font;
+  font-size: 18px;
+  color: $title-color;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+/* .navigation__item {} */
+
+.navigation__link {
+  color: $title-color;
+  text-decoration: none;
+}
+
+/* .navigation__link--active {} */

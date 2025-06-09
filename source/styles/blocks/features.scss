@@ -1,0 +1,20 @@
+.features {
+  @media (max-width: 767px) {
+    min-width: 320px;
+    padding: 0 20px;
+  }
+}
+
+.features__slogan {
+  @media (max-width: 767px) {
+    @include heading-styles(36px, 40px);
+  }
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* .features__item {} */

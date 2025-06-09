@@ -1,0 +1,20 @@
+/* .stats {}
+
+.stats__item {} */
+
+.stats__value {
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    @include heading-styles(24px, 24px);
+  }
+}
+
+.stats__label {
+  margin: 0;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 100%;
+  }
+}

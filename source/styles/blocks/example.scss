@@ -1,0 +1,30 @@
+.example {
+  @media (max-width: 767px) {
+    min-width: 320px;
+    padding: 0 20px;
+    background-color: $second-bg;
+  }
+}
+
+.example__title {
+  @media (max-width: 767px) {
+    @include heading-styles(36px, 40px);
+  }
+}
+
+.example__main-text {
+  @media (max-width: 767px) {
+    line-height: 18px;
+    margin: 0;
+  }
+}
+
+/* .example__stats {} */
+
+.example__cost {
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    @include heading-styles(14px, 20px);
+  }
+}

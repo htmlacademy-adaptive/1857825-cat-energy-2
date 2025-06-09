@@ -1,1 +1,12 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+body {
+  font-family: $primary-font;
+  font-size: 14px;
+  color: $text-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

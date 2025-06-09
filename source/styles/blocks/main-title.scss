@@ -1,0 +1,9 @@
+.main-title {
+  @media (max-width: 767px) {
+    @include heading-styles(36px, 36px);
+  }
+}
+
+.main-title--light {
+  color: $text-light;
+}

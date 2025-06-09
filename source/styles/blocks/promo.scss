@@ -1,0 +1,90 @@
+.promo {
+  @media (max-width: 767px) {
+    padding: 27px 20px 20px;
+    min-width: 320px;
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #505155, #434248);
+
+    // Верхний слой (зеленый градиент + белый)
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0; // Заполняет весь родительский блок
+      background:
+        linear-gradient(
+          to bottom,
+          rgba($lighter-primary-bg, 0.85) 63%,
+          $text-light 63%
+        );
+      z-index: 2; // Находится поверх других слоев
+    }
+
+    // Нижний слой (картинка)
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 63%; // Соответствует зеленой части верхнего слоя
+      width: 100%;
+      background:
+        /* Картинка (центрированная с сохранением пропорций)*/
+        image-set(
+          url("../../images/background-index-mobile@1x.jpg") 1x,
+          url("../../images/background-index-mobile@2x.jpg") 2x
+        ) center/contain no-repeat;
+      z-index: 1; // Находится под верхним слоем
+      background-blend-mode: overlay; // Опционально: режим смешивания
+    }
+  }
+}
+
+.promo__title {
+  @media (max-width: 767px) {
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+  }
+}
+
+.promo__slogan {
+  @media (max-width: 767px) {
+    padding-bottom: 29px;
+    position: relative;
+
+    @include heading-styles(14px, 14px);
+    color: $text-light;
+    text-transform: uppercase;
+    z-index: 4;
+    text-align: center;
+  }
+}
+
+.promo__button {
+  @media (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include button-styles(16px, 20px);
+    position: relative;
+    text-decoration: none;
+    z-index: 3;
+    text-align: center;
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.promo__image {
+  @media (max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+  }
+}

@@ -15,7 +15,6 @@
 
 <body class="page__body">
   <header class="main-header header-container">
-
     <a class="main-header__logo logo" href="#">
       <img class="logo__img" src="#" width="33" height="38" alt="Логотип">
       <img class="logo__img" src="#" width="101" height="18" alt="Cat Energy">
@@ -27,7 +26,6 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link navigation__link--active" href="#">Каталог продукции</a>
-    
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">Подбор программы</a>
@@ -35,7 +33,7 @@
       </ul>
     </nav>
     <button class="main-header__menu-button" type="button">
-      <span class="visualy-hidden">Кнопка меню</span>
+      <span class="visually-hidden">Кнопка меню</span>
       <span></span>
       <span></span>
       <span></span>
@@ -44,185 +42,264 @@
 
   <main class="main">
     <section class="catalog">
-      <h1 class="catalog__title main-title main-title--dark">Каталог продукции</h1>
+      <h1 class="main-title catalog__title">Каталог продукции</h1>
       <ul class="catalog__list">
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 500 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-500-desktop@1x.png 1x, images/chicken-500-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-500-tablet@1x.png 1x, images/chicken-500-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/chicken-500-mobile@1x.png" srcset="images/chicken-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром курица 500гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">500 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Курица</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-500-desktop@1x.png 1x, images/chicken-500-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-500-tablet@1x.png 1x, images/chicken-500-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/chicken-500-mobile@1x.png" srcset="images/chicken-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром курица 500гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 500 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">500 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Курица</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">700 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 1000 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-1000-desktop@1x.png 1x, images/chicken-1000-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-1000-tablet@1x.png 1x, images/chicken-1000-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/chicken-1000-mobile@1x.png" srcset="images/chicken-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром курица 1000гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">1000 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Курица</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-1000-desktop@1x.png 1x, images/chicken-1000-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-1000-tablet@1x.png 1x, images/chicken-1000-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/chicken-1000-mobile@1x.png" srcset="images/chicken-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром курица 1000гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 1000 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">1000 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Курица</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">1000 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 500 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-500-desktop@1x.png 1x, images/fish-500-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-500-tablet@1x.png 1x, images/fish-500-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/fish-500-mobile@1x.png" srcset="images/fish-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рыба 500гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">500 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Рыба</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>         
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-500-desktop@1x.png 1x, images/fish-500-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-500-tablet@1x.png 1x, images/fish-500-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/fish-500-mobile@1x.png" srcset="images/fish-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рыба 500гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 500 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">500 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Рыба</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">700 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 1000 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-1000-desktop@1x.png 1x, images/fish-1000-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-1000-tablet@1x.png 1x, images/fish-1000-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/fish-1000-mobile@1x.png" srcset="images/fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рыба 1000гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">500 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Рыба</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>      
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-1000-desktop@1x.png 1x, images/fish-1000-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-1000-tablet@1x.png 1x, images/fish-1000-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/fish-1000-mobile@1x.png" srcset="images/fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рыба 1000гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 1000 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">1000 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Рыба</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">1000 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 500 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/buckweat-500-desktop@1x.png 1x, images/buckweat-500-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/buckweat-500-tablet@1x.png 1x, images/buckweat-500-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/buckweat-500-mobile@1x.png" srcset="images/buckweat-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром гречка 500гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">500 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Гречка</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>         
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/buckweat-500-desktop@1x.png 1x, images/buckweat-500-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/buckweat-500-tablet@1x.png 1x, images/buckweat-500-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/buckweat-500-mobile@1x.png" srcset="images/buckweat-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром гречка 500гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 500 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">500 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Гречка</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">700 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 1000 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/buckweat-1000-desktop@1x.png 1x, images/buckweat-1000-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/buckweat-1000-tablet@1x.png 1x, images/buckweat-1000-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/buckweat-1000-mobile@1x.png" srcset="images/buckweat-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром гречка 1000гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">1000 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Гречка</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">1000 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/buckweat-1000-desktop@1x.png 1x, images/buckweat-1000-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/buckweat-1000-tablet@1x.png 1x, images/buckweat-1000-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/buckweat-1000-mobile@1x.png" srcset="images/buckweat-1000-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром гречка 1000гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 1000 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">1000 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Гречка</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">1000 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog-card">
-          <a class="catalog-card__link" href="#">
-            <h3 class="catalog-card__title">Cat Energy PRO 500 г</h3>
-          </a>
-          <a class="catalog-card__link" href="#">
-            <picture>
-              <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/rice-500-desktop@1x.png 1x, images/rice-500-desktop@2x.png 2x">
-              <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/rice-500-tablet@1x.png 1x, images/rice-500-tablet@2x.png 2x">
-              <img class="catalog-card__image" src="images/rice-500-mobile@1x.png" srcset="images/rice-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рис 500гр">
-            </picture>
-          </a>
-          <p class="catalog-card__description">Масса</p>
-          <p class="catalog-card__description">500 г</p>
-          <p class="catalog-card__description">Вкус</p>
-          <p class="catalog-card__description">Рис</p>
-          <p class="catalog-card__description">Цена</p>
-          <p class="catalog-card__description">700 &#8381;</p>
-          <a class="catalog-card__link button" href="#">Заказать</a>
+          <div class="catalog-card__wrapper">
+            <a class="catalog-card__link catalog-card__link--image" href="#">
+              <picture>
+                <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/rice-500-desktop@1x.png 1x, images/rice-500-desktop@2x.png 2x">
+                <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/rice-500-tablet@1x.png 1x, images/rice-500-tablet@2x.png 2x">
+                <img class="catalog-card__image" src="images/rice-500-mobile@1x.png" srcset="images/rice-500-mobile@2x.png 2x" width="140" height="107" alt="Банка с товаром рис 500гр">
+              </picture>
+            </a>
+            <a class="catalog-card__link" href="#">
+              <h3 class="catalog-card__title">Cat Energy <br> PRO 500 г</h3>
+            </a>
+            <dl class="catalog-card__options">
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Масса</dt>
+                <dd class="catalog-card__value">500 г</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Вкус</dt>
+                <dd class="catalog-card__value">Рис</dd>
+              </div>
+              <div class="catalog-card__option">
+                <dt class="catalog-card__key">Цена</dt>
+                <dd class="catalog-card__value">700 &#8381;</dd>
+              </div>
+            </dl>
+          </div>
+          <a class="catalog-card__button button" href="#">Заказать</a>
         </li>
-        <li class="catalog__item catalog-card catalog-card--show-more">
+        <li class="catalog__item catalog-card catalog-card--show-all">
           <h3 class="catalog-card__title">Показать еще 100500 товаров</h3>
           <p class="catalog-card__description">На самом деле вкусов гораздо больше!</p>
-          <a class="catalog-card__link button button--show-all" href="#">показать все</a>
+          <a class="catalog-card__button button button--show-all" href="#">показать все</a>
         </li>
       </ul>
     </section>
     <section class="additional-catalog">
       <h2 class="additional-catalog__title">Дополнительные товары</h2>
-      <ul class="additional-catalog__list">
+      <ul class="additional-catalog__list container">
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">Сахарозаменитель</h3>
-          <p class="additional-card__description">1 упаковка (100 г)</p>
-          <p class="additional-card__description">200 &#8381;</p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <div class="additional-card__wrapper">
+            <p class="additional-card__description">1 упаковка (100 г)</p>
+            <p class="additional-card__description">200 &#8381;</p>
+          </div>
+          <a class="additional-card__button button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">питьевая вода</h3>
-          <p class="additional-card__description">5 литров</p>
-          <p class="additional-card__description">50 &#8381;</p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <div class="additional-card__wrapper">
+            <p class="additional-card__description">5 литров</p>
+            <p class="additional-card__description">50 &#8381;</p>
+          </div>
+          <a class="additional-card__button button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">молоко</h3>
-          <p class="additional-card__description">1 литр</p>
-          <p class="additional-card__description">100 &#8381;</p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <div class="additional-card__wrapper">
+            <p class="additional-card__description">1 литр</p>
+            <p class="additional-card__description">100 &#8381;</p>
+          </div>
+          <a class="additional-card__button button" href="#">Заказать</a>
         </li>
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">витамины</h3>
-          <p class="additional-card__description">1 упаковка (30 г)</p>
-          <p class="additional-card__description">300 &#8381;</p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <div class="additional-card__wrapper">
+            <p class="additional-card__description">1 упаковка (30 г)</p>
+            <p class="additional-card__description">300 &#8381;</p>
+          </div>
+          <a class="additional-card__button button" href="#">Заказать</a>
         </li>
       </ul>
     </section>
     <section class="actions">
       <h2 class="actions__title">Акции и новинки</h2>
-      <p class="actions__description">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="actions__wrapper">
+        <p class="actions__description">Закажите все <br> и получите чехол для <br> кота в подарок!</p>
+      </div>
     </section>
     <section class="subscribe">
-      <h2 class="visualy-hidden">Оформите подписку</h2>
+      <h2 class="visually-hidden">Оформите подписку</h2>
       <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-
       <form class="subscribe__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="email">
           <input class="form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
@@ -239,9 +316,21 @@
     </div>
     <div class="footer__map map">
       <picture>
-        <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
-        <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
-        <img class="map__image" src="images/map-mobile@1x.jpg" srcset="images/map-tablet@2x.jpg" width="320" height="362" alt="карта как нас найти">
+        <!-- Десктоп (1440px+) -->
+        <source media="(min-width: 1440px)" srcset="
+      images/map-desktop@1x.jpg 1x,
+      images/map-desktop@2x.jpg 2x
+    " type="image/jpeg" width="1440" height="400">
+        <!-- Планшет (768px–1439px) -->
+        <source media="(min-width: 768px)" srcset="
+      images/map-tablet@1x.jpg 1x,
+      images/map-tablet@2x.jpg 2x
+    " type="image/jpeg" width="768" height="400">
+        <!-- Мобильные (до 767px) -->
+        <img class="map__image" src="images/map-mobile@1x.jpg" srcset="
+      images/map-mobile@1x.jpg 1x,
+      images/map-mobile@2x.jpg 2x
+    " width="320" height="362" alt="Карта: как нас найти">
       </picture>
     </div>
     <div class="footer__bottom">
@@ -251,17 +340,17 @@
       <ul class="social">
         <li class="social__item">
           <a class="social__link social__link--vk" href="#">
-            <span class="visualy-hidden">ВКонтакте</span>
+            <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--yt" href="#">
-            <span class="visualy-hidden">YouTube</span>
+            <span class="visually-hidden">YouTube</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--tg" href="#">
-            <span class="visualy-hidden">Телеграм</span>
+            <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
       </ul>
