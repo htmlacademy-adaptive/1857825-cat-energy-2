@@ -1,13 +1,38 @@
 .social {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
-/* .social__item {}
+/* .social__item {
 
-.social__link {}
+} */
 
-.social__link--vk {}
+.social__link {
+  text-decoration: none;
+  display: inline-block;
+  width: 28px;
+  height: 22px;
+  background-color: #666666;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
 
-.social__link--tg {}
+.social__link--vk {
+  mask-image: url("../../icons/stack.svg#vk-icon");
+  mask-size: contain;
+}
 
-.social__link--yt {} */
+.social__link--yt {
+  mask-image: url("../../icons/stack.svg#ytube-icon");
+  mask-size: contain;
+}
+
+.social__link--tg {
+  mask-image: url("../../icons/stack.svg#telegram-icon");
+  mask-size: contain;
+}

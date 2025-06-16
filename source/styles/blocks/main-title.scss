@@ -1,9 +1,14 @@
 .main-title {
-  @media (max-width: 767px) {
-    @include heading-styles(36px, 36px);
-  }
+  font-family: $title-font;
+  font-weight: 400;
+  color: $title-color;
+  font-size: 36px;
+  margin: 0;
+  line-height: 36px;
 }
 
 .main-title--light {
-  color: $text-light;
+  @media (max-width: ($tablet-1px)) {
+    color: $text-light;
+  }
 }

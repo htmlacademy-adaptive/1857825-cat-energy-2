@@ -1,3 +1,9 @@
-/* .logo {}
+.logo {
+  text-decoration: none;
+}
 
-.logo__img {} */
+.logo__img--text {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

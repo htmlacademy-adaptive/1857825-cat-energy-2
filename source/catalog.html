@@ -15,10 +15,20 @@
 
 <body class="page__body">
   <header class="main-header header-container">
-    <a class="main-header__logo logo" href="#">
-      <img class="logo__img" src="#" width="33" height="38" alt="Логотип">
-      <img class="logo__img" src="#" width="101" height="18" alt="Cat Energy">
+    <a class="main-header__logo logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-tablet-header.svg" width="202" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet-header.svg" width="174" height="50" type="image/svg+xml">
+        <img src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+        <img class="logo__img--text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy">
+      </picture>
     </a>
+    <button class="main-header__menu-button" type="button">
+      <span class="visually-hidden">Кнопка меню</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="main-header__nav navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -32,12 +42,6 @@
         </li>
       </ul>
     </nav>
-    <button class="main-header__menu-button" type="button">
-      <span class="visually-hidden">Кнопка меню</span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </header>
 
   <main class="main">
@@ -310,7 +314,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__contacts contacts">
+    <div class="footer__contacts contacts footer__contacts--dark">
       <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </div>
@@ -334,10 +338,12 @@
       </picture>
     </div>
     <div class="footer__bottom">
-      <div class="footer__logo">
-        <img src="#" width="125" height="24" alt="Cat Energy">
+      <div class="footer__logo logo">
+        <picture>
+          <img src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy.">
+        </picture>
       </div>
-      <ul class="social">
+      <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vk" href="#">
             <span class="visually-hidden">ВКонтакте</span>
@@ -354,7 +360,7 @@
           </a>
         </li>
       </ul>
-      <div class="copyright">
+      <div class="footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
     </div>
