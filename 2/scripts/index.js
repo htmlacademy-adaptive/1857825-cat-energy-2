@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".main-header__menu-button"),n=document.querySelector(".main-header__nav");n.classList.remove("main-header__nav--nojs"),e.addEventListener("click",()=>{n.classList.toggle("main-header__nav--opened"),e.classList.toggle("main-header__menu-button--opened")})});
