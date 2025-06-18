@@ -1,7 +1,144 @@
-/* .main-header {}
+.main-header {
+  min-width: 320px;
+  position: relative;
+  min-height: 87px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 21px 14px 20px;
 
-.main-header__logo {}
+  @media (min-width: $tablet) {
+    padding: 25px 34px 0 30px;
+  }
+}
 
-.main-header__nav {}
+.main-header__menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 10;
 
-.main-header__menu-button {} */
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+
+.main-header__menu-button span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $title-color;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.main-header__menu-button--opened span:nth-child(2) {
+  height: 1.5px;
+  transform: translateY(8px) rotate(45deg);
+}
+
+.main-header__menu-button--opened span:nth-child(3) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.main-header__menu-button--opened span:nth-child(4) {
+  height: 1.5px;
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.main-header__logo {
+  position: relative;
+  min-height: 38px;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 89px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 101px;
+      height: 19.5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-image: url("../../images/logo-text.svg");
+    }
+  }
+}
+
+.main-header__logo:hover {
+  opacity: 80%;
+  transition: all 0.3s ease;
+}
+
+.main-header__logo:active {
+  opacity: 60%;
+}
+
+.logo__img--text {
+  text-align: center;
+  margin-left: clamp(56px, 2vw, 56px);
+  margin-bottom: 6px;
+}
+
+.main-header__nav {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  width: 100%;
+  background: $text-light;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+
+  @media (min-width: $tablet) {
+    position: static;
+    width: auto;
+    max-height: none;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.main-header__nav--opened {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-js.main-header {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.no-js.main-header__menu-button {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.no-js.main-header__nav {
+  @media (max-width: 767px) {
+    position: static;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}

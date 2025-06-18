@@ -1,1 +1,42 @@
-/* .features-card {} */
+.features-card {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.features-card__text {
+  position: relative;
+  padding-left: 80px;
+  min-height: 60px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+
+// Индивидуальные иконки для каждой карточки
+.features-card:nth-of-type(1) .features-card__text::before {
+  background-image: url("../../icons/stack.svg#leaf");
+}
+
+.features-card:nth-of-type(2) .features-card__text::before {
+  background-image: url("../../icons/stack.svg#powder");
+}
+
+.features-card:nth-of-type(3) .features-card__text::before {
+  background-image: url("../../icons/stack.svg#fork-knife");
+}
+
+.features-card:nth-of-type(4) .features-card__text::before {
+  background-image: url("../../icons/stack.svg#clock");
+}

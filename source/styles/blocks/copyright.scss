@@ -1,11 +1,29 @@
-/* .copyright {} */
+/* .copyright {
+
+} */
 
 .copyright__link {
   text-decoration: none;
   color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 
   @media (max-width: 767px) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-image: url("../../icons/stack.svg#html_academy-icon");
+    mask-size: contain;
   }
 }
