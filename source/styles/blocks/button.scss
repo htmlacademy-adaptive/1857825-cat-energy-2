@@ -11,4 +11,24 @@
   @media (min-width: $desktop) {
     width: 91%;
   }
+  
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: $text-color;
+  }
+
+  &:focus {
+    outline: 2px solid #ebebeb;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
 }

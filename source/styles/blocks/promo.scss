@@ -164,7 +164,6 @@
     padding: 10px 5px;
     position: relative;
     z-index: 3;
-    /* display: block; */
     width: 280px;
     min-height: 40px;
     margin: 0 auto;
@@ -197,5 +196,24 @@
     display: block;
     margin-bottom: 32px;
     left: 190px;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid $primary-bg;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
   }
 }

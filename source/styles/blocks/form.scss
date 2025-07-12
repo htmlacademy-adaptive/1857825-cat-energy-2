@@ -12,10 +12,28 @@
 }
 
 .form__input {
-  border: 1px solid $border-primary;
+  border: 1px solid #e7e7e7;
   width: 100%;
   min-height: 56px;
   padding: 23px 13px 13px;
+
+  &:hover {
+    border: 1px solid $border-primary;
+  }
+
+  &:focus {
+    border: 2px solid $text-color;
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
 
   @media (min-width: $tablet) {
     width: 100%;
@@ -41,6 +59,24 @@
   border: none;
 
   @include button-styles(20px, 26px);
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:focus {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
 
   @media (max-width: 767px) {
     padding-top: 15px;
