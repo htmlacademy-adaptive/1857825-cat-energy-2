@@ -1,9 +1,127 @@
 .catalog-card {
   display: flex;
+  flex-direction: column;
+  height: 100%;
+
 
   @media (max-width: 767px) {
-    padding: 20px 20px 25px;
-    flex-direction: column;
+    padding: 22px 20px 17px;
+    min-height: 209px;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  @media (min-width: $tablet) {
+    width: 324px;
+    padding: 10px 37px 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 83px;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      background-color: $alt-bg;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    padding: 10px 38px 40px;
+  }
+}
+
+.catalog-card--show-all {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @media (min-width: $tablet) {
+    width: 324px;
+    padding: 10px 37px 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      border: solid 1px $alt-bg;
+      background: none;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    padding: 10px 29px 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 81px;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      border: solid 1px $alt-bg;
+      background: none;
+      z-index: -1;
+    }
+  }
+
+  .catalog-card__wrapper {
+    @media (min-width: $tablet) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // Центрируем по вертикали
+      align-items: center; // Центрируем по горизонтали
+      padding: 180px 20px 20px;
+      margin-bottom: auto;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 180px 11px 20px;
+    }
   }
 }
 
@@ -12,6 +130,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;  /* Два равных столбца */
     grid-template-rows: auto auto;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    flex: 1 1 auto; // Растягивается, занимая все доступное пространство
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 33px;
   }
 }
 
@@ -24,19 +151,37 @@
 }
 
 .catalog-card__button {
+  @include button-styles(16px, 20px);
   text-decoration: none;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-  @media (max-width: 767px) {
-    @include button-styles(16px, 20px);
-    padding-top: 10px;
-    padding-bottom: 10px;
+  @media (min-width: $tablet) {
+    margin-top: auto; // Прижимаем к низу
+    align-self: center; // Центрируем по горизонтали
+    width: 100%;      // Или нужная вам ширина
   }
 }
 
 .catalog-card__link--image {
   @media (max-width: 767px) {
     grid-row: span 2;
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    grid-row: span 2;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    grid-row: span 2;
+    text-align: center;
+    padding: 0;
   }
 }
 
@@ -46,19 +191,59 @@
   color: #222222;
   text-transform: uppercase;
   margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 76px;
+
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 5px 15px;
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 9px 5px 21px;
+  }
+}
+
+.catalog-card__title--show-all {
+  font-family: $title-font;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (max-width: 767px) {
     font-size: 16px;
     line-height: 20px;
+    max-width: 214px;
+    margin: 0 auto;
+    padding: 57px 5px 8px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 134px;
+    padding-top: 26px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 7px;
+    max-width: 156px;
   }
 }
 
-/* .catalog-card__image {
-
-} */
-
 .catalog-card__options {
   @media (max-width: 767px) {
+    font-size: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -69,14 +254,57 @@
   justify-content: space-between;
   align-items: baseline;
   line-height: 16px;
+  margin-top: auto;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 5px 0 6px;
+  }
 }
 
-/* .catalog-card__key {}
+.catalog-card__description {
+  margin: 0;
+  padding-bottom: 23px;
+  font-size: 12px;
 
-.catalog-card__value {}
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 170px;
+    padding-bottom: 33px;
+  }
+}
 
-.catalog-card__description {} */
 
-.catalog-card--show-all {
+.catalog-card__decorate {
+  position: absolute;
+  display: block;
+  width: 30px;
+  top: 39px;
+  height: 2px;
+  background-color: #d3d3d3;
   text-align: center;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    top: 162px;
+  }
+}
+
+
+.catalog-card__decorate--first {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.catalog-card__decorate--second {
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
 }

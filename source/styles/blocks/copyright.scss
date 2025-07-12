@@ -1,19 +1,31 @@
-/* .copyright {
-
-} */
-
 .copyright__link {
   text-decoration: none;
   color: $text-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
 
+  &:hover,
+  &:focus {
+    color: #68b738;
 
-  @media (max-width: 767px) {
-    font-size: 16px;
-    line-height: 20px;
+    &::after {
+      background-color: #68b738;
+    }
   }
+
+  &:active {
+    color: #68b738;
+    opacity: 0.3;
+
+    &::after {
+      background-color: #68b738;
+      opacity: 0.3;
+    }
+  }
+
 
   &::after {
     content: "";
@@ -25,5 +37,9 @@
     mask-repeat: no-repeat;
     mask-image: url("../../icons/stack.svg#html_academy-icon");
     mask-size: contain;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
   }
 }

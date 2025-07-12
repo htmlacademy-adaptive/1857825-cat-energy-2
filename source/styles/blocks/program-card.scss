@@ -1,45 +1,136 @@
 .program-card {
-  &:nth-of-type(1) {
-    background-image: url("../../icons/stack.svg#cat_back-seat");
-    background-size: 50px 53px;
-    background-repeat: no-repeat;
-  }
-
-  &:nth-of-type(2) {
-    background-image: url("../../icons/stack.svg#cat_back-run");
-    background-size: 67px 50px;
-    background-repeat: no-repeat;
-  }
+  background-color: $alt-bg;
+  padding: 30px 20px 19px;
 
   @media (max-width: 767px) {
-    background-color: $alt-bg;
-    padding: 21px 20px 18px;
-
-    &:nth-of-type(1) {
-      background-position: 7.8% 7.1%;
+    &.program-card--seat .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 53px;
+      background-image: url("../../icons/stack.svg#cat_back-seat");
+      background-size: contain;
     }
 
-    &:nth-of-type(2) {
-      background-position: 7.8% 7.1%;
+    &.program-card--ran .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 67px;
+      height: 50px;
+      background-image: url("../../icons/stack.svg#cat_back-run");
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: 1330px) {
+    padding: 73px 316px 53px 52px;
+
+    &.program-card--seat {
+      background-image: url("../../icons/stack.svg#cat_back-seat");
+      background-size: 200px 211px;
+      background-position: 88% 49%;
+      background-repeat: no-repeat;
+    }
+
+    &.program-card--ran {
+      background-image: url("../../icons/stack.svg#cat_back-run");
+      background-size: 268px 200px;
+      background-position: 93% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 41px 61px 55px 52px;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &.program-card--seat .program-card__title {
+      padding-left: 162px;
+    }
+
+    &.program-card--seat .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 106px;
+      background-image: url("../../icons/stack.svg#cat_back-seat");
+      background-size: contain;
+    }
+
+    &.program-card--ran .program-card__title {
+      padding-left: 162px;
+    }
+
+    &.program-card--ran .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 134px;
+      height: 100px;
+      background-image: url("../../icons/stack.svg#cat_back-run");
+      background-size: contain;
     }
   }
 }
 
 .program-card__title {
+  text-transform: uppercase;
+
   @media (max-width: 767px) {
     @include heading-styles(24px, 37px);
-    text-align: center;
-    text-transform: uppercase;
+    position: relative;
+    padding-left: 70px;
+  }
+
+  @media (min-width: $tablet) {
+    @include heading-styles(36px, 36px);
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    @include heading-styles(36px, 36px);
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 34px;
   }
 }
+
 
 .program-card__description {
   margin: 0;
 
   @media (max-width: 767px) {
-    padding-top: 22px;
+    padding-top: 28px;
     padding-bottom: 23px;
     line-height: 18px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 38px 0 1px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -50,30 +141,57 @@
   display: inline-flex;
   align-items: center;
   transition: color 0.3s ease;
-  padding-right: 28px;
+  padding-top: 20px;
+  padding-right: 36px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 50%;
+    right: -5px;
+    top: 60%;
     width: 24px;
     height: 12px;
     background-image: url("../../icons/stack.svg#arrow");
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateY(-50%) scaleX(1);
+    background-size: cover;
+    transform-origin: left center;
     transition: transform 0.3s ease;
   }
 
   &:hover {
     &::after {
-      transform: translateY(-50%) scaleX(1.33);
+      transform: scaleX(1.33);
     }
   }
 
   @media (max-width: 767px) {
     @include button-styles(16px, 16px);
+    max-width: 125px;
+  }
+
+  @media (min-width: $tablet) {
+    @include button-styles(20px, 20px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &::after {
+      top: 33%;
+      right: -15px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 1px;
+    margin-top: auto;
+    gap: 25px;
+
+    &::after {
+      position: relative;
+      right: -2px;
+      top: 5%;
+      transform: translateY(-5%);
+    }
   }
 }

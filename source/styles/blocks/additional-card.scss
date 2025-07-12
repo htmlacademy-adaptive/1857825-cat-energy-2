@@ -1,11 +1,30 @@
 .additional-card {
-  display: flex;
-
   @media (max-width: 767px) {
+    display: flex;
     flex-direction: column;
-    padding-top: 13px;
-    padding-bottom: 19px;
+    padding-top: 7px;
+    padding-bottom: 16px;
     border-bottom: 1px solid $border-primary;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 24px 38px 27px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto; // 2 строки
+    row-gap: 0;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border-bottom: 1px solid #cdcdcd;
+    display: grid;
+    grid-template-columns: 285px 131px 1fr 244px; // Соотношение колонок
+    align-items: center;
+    gap: 0 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -13,6 +32,17 @@
   @media (max-width: 767px) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: end;
+    gap: 55px;
+    grid-column: 2;
+  }
+
+  @media (min-width: $desktop) {
+    display: contents;
   }
 }
 
@@ -22,15 +52,53 @@
   color: $title-color-alt;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 1px;
 
   @media (max-width: 767px) {
     font-size: 16px;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    grid-column: 1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1; // Первая колонка
+    line-height: 20px;
+  }
 }
 
 .additional-card__description {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 17px;
+
   @media (max-width: 767px) {
     line-height: 14px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 2px;
+
+    &:first-of-type {
+      grid-column: 2; // Вторая колонка (описание)
+      text-align: left;
+    }
+
+    &:last-of-type {
+      grid-column: 3; // Третья колонка (цена)
+      text-align: right;
+    }
   }
 }
 
@@ -42,5 +110,18 @@
     @include button-styles(16px, 20px);
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    @include button-styles(16px, 20px);
+    padding: 10px 0;
+    grid-column: 1/-1;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 4; // Четвертая колонка
+    justify-self: end;
+    min-width: 120px;
   }
 }

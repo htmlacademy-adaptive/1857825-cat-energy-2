@@ -2,6 +2,41 @@
   display: flex;
   align-items: center;
   margin: 0;
+
+
+  @media (min-width: $tablet) {
+    position: relative;
+    min-height: 280px;
+    min-width: 241px;
+
+    @media (max-width: 770px) {
+      min-width: 240px;
+      margin-right: 50px;
+    }
+
+    &::after {
+      content: ""counter(item) "";
+      position: absolute;
+      right: 25px;
+      top: 0;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: $title-font;
+      color: $alt-bg;
+      width: 136px;
+      height: 280px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 243px;
+    width: min-content;
+    min-height: 280px;
+
+    &::after {
+      right: -8px;
+    }
+  }
 }
 
 .features-card__text {
@@ -9,34 +44,50 @@
   padding-left: 80px;
   min-height: 60px;
   margin: 0;
+  padding-top: 5px;
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    padding-top: 95px;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 2;
+    max-width: 242px;
+  }
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0%;
     width: 60px;
     height: 60px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
+
+    @media (min-width: $tablet) {
+      transform: translateY(0);
+      width: 80px;
+      height: 80px;
+      top: -17px;
+    }
   }
 }
 
 // Индивидуальные иконки для каждой карточки
-.features-card:nth-of-type(1) .features-card__text::before {
+.features-card--useful .features-card__text::before {
   background-image: url("../../icons/stack.svg#leaf");
 }
 
-.features-card:nth-of-type(2) .features-card__text::before {
+.features-card--powder .features-card__text::before {
   background-image: url("../../icons/stack.svg#powder");
 }
 
-.features-card:nth-of-type(3) .features-card__text::before {
+.features-card--change .features-card__text::before {
   background-image: url("../../icons/stack.svg#fork-knife");
 }
 
-.features-card:nth-of-type(4) .features-card__text::before {
+.features-card--result .features-card__text::before {
   background-image: url("../../icons/stack.svg#clock");
 }

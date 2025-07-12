@@ -5,20 +5,33 @@
     flex-direction: column;
     gap: 16px;
   }
+
+  @media (min-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .form__input {
   border: 1px solid $border-primary;
+  width: 100%;
+  min-height: 56px;
+  padding: 23px 13px 13px;
 
-  @media (max-width: 767px) {
+  @media (min-width: $tablet) {
     width: 100%;
+    min-width: 376px;
     min-height: 56px;
     padding: 23px 13px 13px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 496px;
   }
 
   &::placeholder {
     @include button-styles (20px, 56px);
     text-transform: uppercase;
+    color: $text-color;
   }
 }
 
@@ -27,9 +40,16 @@
   text-align: center;
   border: none;
 
+  @include button-styles(20px, 26px);
+
   @media (max-width: 767px) {
-    @include button-styles(16px, 20px);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-width: 256px;
   }
 }

@@ -2,10 +2,13 @@
   background-color: $primary-bg;
   color: $text-light;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .button--show-all {
   color: $text-color;
   background-color: $alt-bg;
+
+  @media (min-width: $desktop) {
+    width: 91%;
+  }
 }

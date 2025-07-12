@@ -1,14 +1,46 @@
 .main-header {
   min-width: 320px;
   position: relative;
-  min-height: 87px;
+  min-height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 21px 14px 20px;
+  padding: 11px 21px 13px 20px;
 
   @media (min-width: $tablet) {
-    padding: 25px 34px 0 30px;
+    padding: 14px 29px 0 30px;
+    justify-content: left;
+    gap: 89px;
+  }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 51% auto;
+    width: 100%;
+    height: auto;
+    min-height: 59px;
+    padding: 55px 110px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: $text-light;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 9px;
+  }
+}
+
+.main-header--index {
+  @media (min-width: $desktop) {
+    background-color: $text-light;
+    display: grid;
+    grid-template-columns: 31% auto;
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    min-height: 59px;
+    padding: 55px 110px 0;
+    position: relative;
+    overflow: hidden;
   }
 }
 
@@ -69,11 +101,22 @@
       transform: translateY(-50%);
       width: 101px;
       height: 19.5px;
-      background-size: contain;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: right;
       background-image: url("../../images/logo-text.svg");
     }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 2px;
+    z-index: 5;
+    width: 202px;
+    height: 59px;
   }
 }
 
@@ -94,7 +137,7 @@
 
 .main-header__nav {
   position: absolute;
-  top: 87px;
+  top: 65px;
   left: 0;
   width: 100%;
   background: $text-light;
@@ -113,6 +156,16 @@
     opacity: 1;
     visibility: visible;
   }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    padding-left: 111px;
+    padding-top: 18px;
+  }
 }
 
 
@@ -125,6 +178,7 @@
 .no-js.main-header {
   @media (max-width: 767px) {
     display: block;
+    padding: 13px 0 0;
   }
 }
 
@@ -140,5 +194,20 @@
     max-height: none;
     opacity: 1;
     visibility: visible;
+  }
+}
+
+.no-js.main-header__logo {
+  @media (max-width: 767px) {
+    &::after {
+      top: -115%;
+      left: 105px;
+    }
+  }
+}
+
+.no-js.logo__img {
+  @media (max-width: 767px) {
+    margin: 0 0 15px 20px;
   }
 }
