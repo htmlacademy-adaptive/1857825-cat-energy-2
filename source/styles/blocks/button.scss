@@ -11,7 +11,7 @@
   @media (min-width: $desktop) {
     width: 91%;
   }
-  
+
   &:hover {
     background-color: #ebebeb;
   }
@@ -23,7 +23,7 @@
 
   &:focus {
     outline: 2px solid #ebebeb;
-    outline-offset: 2px;
+    color: $text-color;
   }
 
   &:disabled {

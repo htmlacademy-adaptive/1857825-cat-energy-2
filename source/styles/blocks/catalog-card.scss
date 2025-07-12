@@ -172,8 +172,7 @@
   }
 
   &:focus {
-    outline: 2px solid $primary-bg;
-    outline-offset: 2px;
+    color: rgba($color: $text-light, $alpha: 0.3);
   }
 
   &:disabled {

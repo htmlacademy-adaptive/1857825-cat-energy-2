@@ -31,7 +31,7 @@
     cursor: not-allowed;
   }
 
-  &:invalid {
+  &:not(:placeholder-shown):not(:focus):invalid {
     border: 2px solid #ff8282;
   }
 
