@@ -124,22 +124,4 @@
     justify-self: end;
     min-width: 120px;
   }
-
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:focus {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:disabled {
-    background-color: $alt-bg;
-    color: $text-color;
-    cursor: not-allowed;
-  }
 }

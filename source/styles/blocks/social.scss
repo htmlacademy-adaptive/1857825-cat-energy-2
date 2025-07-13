@@ -11,7 +11,14 @@
 
   @media (min-width: $tablet) {
     border: none;
-    margin-left: 37px;
+    margin-left: 18px;
+    padding: 5px 0 0;
+    margin-bottom: auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 23px 0 0;
+    margin-left: 15px;
   }
 }
 

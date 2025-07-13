@@ -3,7 +3,7 @@
   padding: 30px 20px 19px;
 
   @media (max-width: 767px) {
-    &.program-card--seat .program-card__title::before {
+    &--seat .program-card__title::before {
       content: "";
       position: absolute;
       left: 0;
@@ -15,7 +15,7 @@
       background-size: contain;
     }
 
-    &.program-card--ran .program-card__title::before {
+    &--ran .program-card__title::before {
       content: "";
       position: absolute;
       left: -10px;
@@ -31,14 +31,14 @@
   @media (min-width: $tablet) and (max-width: 1330px) {
     padding: 73px 316px 53px 52px;
 
-    &.program-card--seat {
+    &--seat {
       background-image: url("../../icons/stack.svg#cat_back-seat");
       background-size: 200px 211px;
       background-position: 88% 49%;
       background-repeat: no-repeat;
     }
 
-    &.program-card--ran {
+    &--ran {
       background-image: url("../../icons/stack.svg#cat_back-run");
       background-size: 268px 200px;
       background-position: 93% 50%;
@@ -53,11 +53,11 @@
     flex-direction: column;
     height: 100%;
 
-    &.program-card--seat .program-card__title {
+    &--seat .program-card__title {
       padding-left: 162px;
     }
 
-    &.program-card--seat .program-card__title::before {
+    &--seat .program-card__title::before {
       content: "";
       position: absolute;
       left: 0;
@@ -69,11 +69,11 @@
       background-size: contain;
     }
 
-    &.program-card--ran .program-card__title {
+    &--ran .program-card__title {
       padding-left: 162px;
     }
 
-    &.program-card--ran .program-card__title::before {
+    &--ran .program-card__title::before {
       content: "";
       position: absolute;
       left: -18px;
@@ -138,12 +138,13 @@
   color: $title-color;
   text-decoration: none;
   text-transform: uppercase;
-  display: inline-flex;
+  width: fit-content;
+  max-width: 220px;
+  display: flex;
   align-items: center;
   transition: color 0.3s ease;
   padding-top: 20px;
-  padding-right: 36px;
-  position: relative;
+  gap: 12px;
 
   &:active {
     color: rgba($color: $text-color, $alpha: 0.25);
@@ -156,16 +157,14 @@
 
   &::after {
     content: "";
-    position: absolute;
-    right: -5px;
-    top: 60%;
-    width: 24px;
+    width: 33px;
+    min-width: 33px;
     height: 12px;
     background-color: currentColor; // Берет цвет от родителя
     mask-image: url("../../icons/stack.svg#arrow");
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: 32px 12px;
     transform-origin: left center;
     transition: transform 0.3s ease;
   }
@@ -179,30 +178,20 @@
 
   @media (max-width: 767px) {
     @include button-styles(16px, 16px);
-    max-width: 125px;
   }
 
   @media (min-width: $tablet) {
     @include button-styles(20px, 20px);
     padding-top: 10px;
     padding-bottom: 10px;
-
-    &::after {
-      top: 33%;
-      right: -15px;
-    }
+    align-items: center;
+    gap: 22px;
   }
 
   @media (min-width: $desktop) {
     padding-top: 1px;
     margin-top: auto;
     gap: 25px;
-
-    &::after {
-      position: relative;
-      right: -2px;
-      top: 5%;
-      transform: translateY(-5%);
-    }
+    max-width: 500px;
   }
 }

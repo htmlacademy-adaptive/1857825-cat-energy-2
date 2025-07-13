@@ -32,7 +32,10 @@
       image-set(
         url("../../images/background-catalog-action-mobile@1x.webp") 1x,
         url("../../images/background-catalog-action-mobile@2x.webp") 2x
-      ) center/contain no-repeat,
+      ),
+      url("../../images/background-catalog-action-mobile@1x.jpg"),
+      url("../../images/background-catalog-action-mobile@2x.jpg"),
+      center/contain no-repeat,
       #8a8a8a;
   }
 
@@ -48,7 +51,10 @@
       image-set(
         url("../../images/background-catalog-action-tablet@1x.webp") 1x,
         url("../../images/background-catalog-action-tablet@2x.webp") 2x
-      ) center/contain no-repeat,
+      ),
+      url("../../images/background-catalog-action-tablet@1x.jpg"),
+      url("../../images/background-catalog-action-tablet@2x.jpg"),
+      center/contain no-repeat,
       #8a8a8a;
   }
 
@@ -65,7 +71,10 @@
       image-set(
         url("../../images/background-catalog-action-desktop@1x.webp") 1x,
         url("../../images/background-catalog-action-desktop@2x.webp") 2x
-      ) center/contain no-repeat,
+      ),
+      url("../../images/background-catalog-action-desktop@1x.jpg"),
+      url("../../images/background-catalog-action-desktop@2x.jpg"),
+      center/contain no-repeat,
       #8a8a8a;
   }
 }

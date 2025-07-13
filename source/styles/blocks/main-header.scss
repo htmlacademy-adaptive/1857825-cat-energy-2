@@ -110,6 +110,8 @@
 
   @media (min-width: $tablet) {
     padding-top: 11px;
+    margin-bottom: auto;
+    min-width: 174px;
   }
 
   @media (min-width: $desktop) {
@@ -129,11 +131,6 @@
   opacity: 60%;
 }
 
-.logo__img--text {
-  text-align: center;
-  margin-left: clamp(56px, 2vw, 56px);
-  margin-bottom: 6px;
-}
 
 .main-header__nav {
   position: absolute;
@@ -203,11 +200,5 @@
       top: -115%;
       left: 105px;
     }
-  }
-}
-
-.no-js.logo__img {
-  @media (max-width: 767px) {
-    margin: 0 0 15px 20px;
   }
 }

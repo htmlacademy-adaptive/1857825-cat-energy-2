@@ -1,3 +1,17 @@
 .logo {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo__img--text {
+  text-align: center;
+  margin-left: clamp(56px, 2vw, 56px);
+  margin-bottom: 6px;
+}
+
+.no-js.logo__img {
+  @media (max-width: 767px) {
+    margin: 0 0 15px 20px;
+  }
 }

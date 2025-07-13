@@ -60,24 +60,6 @@
 
   @include button-styles(20px, 26px);
 
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:focus {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:disabled {
-    background-color: $alt-bg;
-    color: $text-color;
-    cursor: not-allowed;
-  }
-
   @media (max-width: 767px) {
     padding-top: 15px;
     padding-bottom: 15px;

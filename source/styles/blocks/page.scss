@@ -1,9 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .page__body {
   margin: 0;
 }
@@ -29,6 +23,8 @@
           url("../../images/background-index-desktop 1@1x.webp") 1x,
           url("../../images/background-index-desktop 1@2x.webp") 2x
         ),
+        url("../../images/background-index-desktop 1@1x.jpg"),
+        url("../../images/background-index-desktop 1@2x.jpg"),
         linear-gradient(to right, #505155 100%);
       z-index: 1;
     }
