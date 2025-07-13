@@ -44,15 +44,26 @@
       </ul>
     </nav>
   </header>
-  <main class="main">
+  <main>
     <section class="promo" data-test="hero">
       <h1 class="promo__title main-title main-title--light">Функциональное <br> питание для котов</h1>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
       <div class="promo__image-container">
         <picture>
-          <source width="552" height="499" type="image/webp" media="(min-width: 1330px)" srcset="images/promo-index-desktop@1x.webp 1x, images/promo-index-desktop@2x.webp 2x">
-          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/promo-index-tablet@1x.webp 1x, images/promo-index-tablet@2x.webp 2x">
-          <img class="promo__image" src="images/promo-index-mobile@1x.webp" srcset="images/promo-index-mobile@2x.webp 2x" width="280" height="270" alt="банка с продуктом Cat Energy" style="background: transparent;">
+          <!-- WebP для десктопа (1330px+) -->
+          <source media="(min-width: 1330px)" srcset="images/promo-index-desktop@1x.webp 1x, images/promo-index-desktop@2x.webp 2x" type="image/webp" width="552" height="499">
+          <!-- PNG для десктопа (1330px+) -->
+          <source media="(min-width: 1330px)" srcset="images/promo-index-desktop@1x.png 1x, images/promo-index-desktop@2x.png 2x" type="image/png">
+          <!-- WebP для планшетов (768px+) -->
+          <source media="(min-width: 768px)" srcset="images/promo-index-tablet@1x.webp 1x, images/promo-index-tablet@2x.webp 2x" type="image/webp" width="709" height="609">
+          <!-- PNG для планшетов (768px+) -->
+          <source media="(min-width: 768px)" srcset="images/promo-index-tablet@1x.png 1x, images/promo-index-tablet@2x.png 2x" type="image/png">
+          <!-- WebP для мобильных -->
+          <source srcset="images/promo-index-mobile@1x.webp 1x, images/promo-index-mobile@2x.webp 2x" type="image/webp">
+          <!-- PNG для мобильных -->
+          <source srcset="images/promo-index-mobile@1x.png 1x, images/promo-index-mobile@2x.png 2x" type="image/png">
+          <!-- если не поддерживается <picture> или все форматы -->
+          <img class="promo__image" src="images/promo-index-mobile@1x.png" srcset="images/promo-index-mobile@2x.png 2x" width="280" height="270" alt="банка с продуктом Cat Energy" style="background: transparent;">
         </picture>
         <a class="promo__button button" href="#">Подобрать программу</a>
       </div>
@@ -96,7 +107,7 @@
     </section>
     <section class="example" data-test="proof">
       <div class="example__wrapper">
-        <div class="container">
+        <div class="example__container">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__main-text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__stats stats">
@@ -116,12 +127,23 @@
         <div class="slider-container">
           <div class="slider">
             <picture>
-              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/fat-cat-tablet@1x.webp 1x, images/fat-cat-tablet@2x.webp 2x">
-              <img class="slider__image slider__image--left" src="images/fat-саt-mobile@1x.webp" srcset="images/fat-саt-mobile@2x.webp 2x" width="280" height="256" alt="Фото до: жирненький котик">
+              <!-- WebP для поддерживающих браузеров (планшет/десктоп) -->
+              <source media="(min-width: 768px)" srcset="images/fat-cat-tablet@1x.webp 1x, images/fat-cat-tablet@2x.webp 2x" type="image/webp" width="560" height="512">
+              <!-- WebP для мобильных -->
+              <source srcset="images/fat-cat-mobile@1x.webp 1x, images/fat-cat-mobile@2x.webp 2x" type="image/webp">
+              <!-- Резервный (если WebP не поддерживается) -->
+              <source media="(min-width: 768px)" srcset="images/fat-cat-tablet@1x.png 1x, images/fat-cat-tablet@2x.png 2x" type="image/png">
+              <img class="slider__image slider__image--left" src="images/fat-cat-mobile@1x.png" srcset="images/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Фото до: жирненький котик">
             </picture>
+
             <picture>
-              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/slim-cat-tablet@1x.webp 1x, images/slim-cat-tablet@2x.webp 2x">
-              <img class="slider__image slider__image--right" src="images/slim-cat-mobile@1x.webp" srcset="images/slim-cat-mobile@2x.webp 2x" width="280" height="256" alt="Фото после: стройный котик">
+              <!-- WebP для поддерживающих браузеров (планшет/десктоп) -->
+              <source media="(min-width: 768px)" srcset="images/slim-cat-tablet@1x.webp 1x, images/slim-cat-tablet@2x.webp 2x" type="image/webp" width="560" height="512">
+              <!-- WebP для мобильных -->
+              <source srcset="images/slim-cat-mobile@1x.webp 1x, images/slim-cat-mobile@2x.webp 2x" type="image/webp">
+              <!-- Резервный (если WebP не поддерживается) -->
+              <source media="(min-width: 768px)" srcset="images/slim-cat-tablet@1x.png 1x, images/slim-cat-tablet@2x.png 2x" type="image/png">
+              <img class="slider__image slider__image--right" src="images/slim-cat-mobile@1x.png" srcset="images/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Фото после: стройный котик">
             </picture>
             <div class="slider__controls">
               <button class="slider__button" type="button">
@@ -145,28 +167,30 @@
         <picture>
           <!-- Десктоп (1440px+) -->
           <source media="(min-width: 1330px)" srcset="
-      images/map-desktop@1x.webp 1x,
-      images/map-desktop@2x.webp 2x
-    " type="image/webp" width="1440" height="400">
+      images/map-desktop@1x.jpg 1x,
+      images/map-desktop@2x.jpg 2x
+    " type="image/jpeg" width="1440" height="400">
           <!-- Планшет (768px–1439px) -->
           <source media="(min-width: 768px)" srcset="
-      images/map-tablet@1x.webp 1x,
-      images/map-tablet@2x.webp 2x
-    " type="image/webp" width="768" height="400">
+      images/map-tablet@1x.jpg 1x,
+      images/map-tablet@2x.jpg 2x
+    " type="image/jpeg" width="768" height="400">
           <!-- Мобильные (до 767px) -->
-          <img class="map__image" src="images/map-mobile@1x.webp" srcset="
-      images/map-mobile@1x.webp 1x,
-      images/map-mobile@2x.webp 2x
+          <img class="map__image" src="images/map-mobile@1x.jpg" srcset="
+      images/map-mobile@1x.jpg 1x,
+      images/map-mobile@2x.jpg 2x
     " width="320" height="362" alt="Карта: как нас найти">
         </picture>
       </div>
     </div>
     <div class="footer__bottom" data-test="footer">
-      <a class="footer__logo logo" href="#">
-        <picture>
-          <img class="footer__logo-img" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
-        </picture>
-      </a>
+      <div class="footer__logo">
+        <a class="logo" href="#">
+          <picture>
+            <img class="footer__logo-img" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
+          </picture>
+        </a>
+      </div>
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">

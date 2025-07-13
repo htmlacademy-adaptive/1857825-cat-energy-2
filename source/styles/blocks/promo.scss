@@ -29,11 +29,15 @@
       left: 0;
       height: 61%; // Соответствует зеленой части верхнего слоя
       width: 100%;
-      background:
+      background-image:
         image-set(
           url("../../images/background-index-mobile@1x.webp") 1x,
           url("../../images/background-index-mobile@2x.webp") 2x
-        ) 50% 0/contain no-repeat;
+        ),
+        url("../../images/background-index-mobile@1x.jpg");
+      background-position: 50% 0;
+      background-size: contain;
+      background-repeat: no-repeat;
       z-index: 1;
       background-blend-mode: overlay;
     }
@@ -196,23 +200,5 @@
     display: block;
     margin-bottom: 32px;
     left: 190px;
-  }
-
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:focus {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:disabled {
-    background-color: $alt-bg;
-    color: $text-color;
-    cursor: not-allowed;
   }
 }

@@ -42,4 +42,8 @@
   @media (min-width: $tablet) {
     gap: 23px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 15px;
+  }
 }

@@ -1,0 +1,10 @@
+.catalog-desktop-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 354px;
+    grid-template-rows: auto 1fr;
+    gap: 0 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

@@ -2,6 +2,24 @@
   background-color: $primary-bg;
   color: $text-light;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:focus {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
 }
 
 .button--show-all {
@@ -10,6 +28,7 @@
 
   @media (min-width: $desktop) {
     width: 91%;
+    margin: 0 auto;
   }
 
   &:hover {

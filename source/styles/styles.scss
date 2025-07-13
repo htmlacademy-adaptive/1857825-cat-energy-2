@@ -27,6 +27,7 @@
 // Блоки каталога (catalog.html)
 @import "./blocks/catalog.scss";
 @import "./blocks/catalog-card.scss";
+@import "./blocks/catalog-desktop-wrapper.scss";
 @import "./blocks/additional-catalog.scss";
 @import "./blocks/additional-card.scss";
 @import "./blocks/actions.scss";
@@ -35,7 +36,6 @@
 
 // Общие блоки
 @import "./blocks/button.scss";
-@import "./blocks/main.scss";
 @import "./blocks/main-title.scss";
 @import "./blocks/container.scss";
 
