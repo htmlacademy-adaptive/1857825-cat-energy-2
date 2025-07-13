@@ -1,0 +1,34 @@
+.button {
+  background-color: $primary-bg;
+  color: $text-light;
+  text-transform: uppercase;
+}
+
+.button--show-all {
+  color: $text-color;
+  background-color: $alt-bg;
+
+  @media (min-width: $desktop) {
+    width: 91%;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: $text-color;
+  }
+
+  &:focus {
+    outline: 2px solid #ebebeb;
+    color: $text-color;
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
+}

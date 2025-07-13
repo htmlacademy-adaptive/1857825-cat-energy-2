@@ -1,0 +1,218 @@
+.promo {
+  @media (max-width: 767px) {
+    padding: 27px 20px 20px;
+    min-width: 320px;
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #505155, #434248);
+
+    // Верхний слой (зеленый градиент + белый)
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba($lighter-primary-bg, 0.85) 61%,
+          $text-light 61%
+        );
+      z-index: 2;
+    }
+
+    // Нижний слой (картинка)
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 61%; // Соответствует зеленой части верхнего слоя
+      width: 100%;
+      background:
+        image-set(
+          url("../../images/background-index-mobile@1x.webp") 1x,
+          url("../../images/background-index-mobile@2x.webp") 2x
+        ) 50% 0/contain no-repeat;
+      z-index: 1;
+      background-blend-mode: overlay;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    background-color: $text-light;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    min-height: 580px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: $text-light;
+    text-align: left;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.promo__title {
+  @media (max-width: 767px) {
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 63px 223px 40px 120px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 110px 10px 40px 190px;
+    z-index: 4;
+    position: relative;
+    text-align: left;
+    width: 50%;
+    max-width: 624px;
+    left: 0;
+  }
+}
+
+.promo__slogan {
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    padding-bottom: 29px;
+    position: relative;
+
+    @include heading-styles(14px, 14px);
+    color: $text-light;
+    z-index: 4;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    @include heading-styles(20px, 20px);
+    padding: 0 360px 21px 120px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 10px 22px 190px;
+
+    @include heading-styles(20px, 20px);
+    color: $title-color;
+    z-index: 4;
+    position: relative;
+    text-align: left;
+    width: 50%;
+    max-width: 500px;
+    left: 0;
+  }
+}
+
+.promo__image-container {
+  @media (min-width: $tablet) {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+
+  @media (min-width: $desktop) {
+    position: static;
+    display: block;
+  }
+}
+
+.promo__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+
+    position: absolute;
+    z-index: 3;
+    right: 23%;
+    top: 35%;
+    transform: translateY(-35%);
+    max-width: 552px;
+    height: auto;
+    margin: 0;
+    min-height: 300px;
+  }
+}
+
+
+.promo__button {
+  text-decoration: none;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    @include button-styles(16px, 20px);
+    padding: 10px 5px;
+    position: relative;
+    z-index: 3;
+    width: 280px;
+    min-height: 40px;
+    margin: 0 auto;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $tablet) {
+    @include button-styles(20px, 26px);
+    position: absolute;
+    left: 120px;
+    top: 29px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 242px;
+  }
+
+  @media (min-width: $desktop) {
+    @include button-styles(20px, 26px);
+    width: 244px;
+    min-height: 54px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin-bottom: 32px;
+    left: 190px;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:focus {
+    color: rgba($color: $text-light, $alpha: 0.3);
+  }
+
+  &:disabled {
+    background-color: $alt-bg;
+    color: $text-color;
+    cursor: not-allowed;
+  }
+}

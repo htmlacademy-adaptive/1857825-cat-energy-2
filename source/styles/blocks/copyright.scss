@@ -1,0 +1,45 @@
+.copyright__link {
+  text-decoration: none;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+
+  &:hover,
+  &:focus {
+    color: #68b738;
+
+    &::after {
+      background-color: #68b738;
+    }
+  }
+
+  &:active {
+    color: #68b738;
+    opacity: 0.3;
+
+    &::after {
+      background-color: #68b738;
+      opacity: 0.3;
+    }
+  }
+
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-image: url("../../icons/stack.svg#html_academy-icon");
+    mask-size: contain;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
+  }
+}

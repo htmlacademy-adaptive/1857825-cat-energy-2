@@ -1,0 +1,19 @@
+.main-title {
+  font-family: $title-font;
+  font-weight: 400;
+  color: $title-color;
+  font-size: 36px;
+  margin: 0;
+  line-height: 36px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.main-title--light {
+  @media (max-width: (767px)) {
+    color: $text-light;
+  }
+}

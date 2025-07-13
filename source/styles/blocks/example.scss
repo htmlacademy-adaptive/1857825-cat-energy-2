@@ -1,0 +1,106 @@
+.example {
+  @media (max-width: 767px) {
+    min-width: 320px;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    background-color: $second-bg;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    background: $second-bg;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 136px; // Фиксированная высота верхнего цвета
+      background: $text-light; // Верхний цвет
+      z-index: 0;
+    }
+  }
+
+  .container {
+    @media (min-width: $desktop) {
+      margin: 0;
+      position: relative;
+      max-width: 442px;
+    }
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    min-height: 500px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: calc(50% - 720px); // Половина разницы между экраном и 1440px
+      background: $second-bg;
+      z-index: 0;
+    }
+  }
+}
+
+.example__title {
+  @media (max-width: 767px) {
+    @include heading-styles(36px, 40px);
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $tablet) {
+    @include heading-styles(60px, 60px);
+    padding: 45px 30px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    z-index: 2;
+    padding: 0 10px 76px 0;
+  }
+}
+
+.example__main-text {
+  margin: 0;
+
+  @media (max-width: 767px) {
+    line-height: 18px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 30px 54px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 70px 10px 69px 0;
+    margin: 0;
+    max-width: 442px;
+  }
+}
+
+.example__stats-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: left;
+
+  @media (min-width: $tablet) {
+    gap: 43px;
+  }
+}

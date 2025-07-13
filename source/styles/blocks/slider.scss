@@ -1,0 +1,114 @@
+.slider {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 256px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  left: 50%;
+}
+
+.slider__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider__image--left {
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.slider__image--right {
+  right: 0;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.slider__button {
+  position: relative;
+  display: inline-block;
+  width: 4px;
+  height: 256px;
+  background: #666666;
+  border: none;
+  border-radius: 2px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @media (min-width: $tablet) {
+    height: 560px;
+  }
+}
+
+.slider__thumb {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  transition: inherit;
+
+  @media (min-width: $tablet) {
+    top: 46%;
+  }
+}
+
+.slider__thumb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#thumb-button");
+  mask-position: center;
+  mask-size: 24 18;
+  mask-repeat: no-repeat;
+  transition: inherit;
+}
+
+
+.slider__button:hover {
+  background: #68b738;
+}
+
+.slider__button:hover .slider__thumb {
+  border-color: #68b738;
+}
+
+.slider__button:hover .slider__thumb::after {
+  background-color: #68b738;
+}
+
+.slider__button:active {
+  background-color: #5eaa2f;
+}
+
+.slider__button:active .slider__thumb {
+  border-color: #5eaa2f;
+}
+
+.slider__button:active .slider__thumb::after {
+  background-color: #5eaa2f;
+}
