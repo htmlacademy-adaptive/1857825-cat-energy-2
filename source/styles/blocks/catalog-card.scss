@@ -165,6 +165,21 @@
   @media (max-width: 767px) {
     @include button-styles(20px, 20px);
   }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
 }
 
 .catalog-card__button {
@@ -179,24 +194,6 @@
     align-self: center;
     width: 100%;
   }
-
-  /* &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:focus {
-    color: rgba($color: $text-light, $alpha: 0.3);
-  }
-
-  &:disabled {
-    background-color: $alt-bg;
-    color: $text-color;
-    cursor: not-allowed;
-  } */
 }
 
 .catalog-card__link--image {
